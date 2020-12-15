@@ -677,6 +677,10 @@ button:hover {
           justify-content: center;
 }
 
+.menu > .menu {
+  display: none;
+}
+
 .menu a {
   color: inherit;
   text-decoration: none;

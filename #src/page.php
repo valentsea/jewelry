@@ -21,11 +21,26 @@ if(is_front_page() || is_home()) {
 ?>
     <main class="main">
 <div class="mainpage-text">
-  <h2><?php the_field('main-page'); ?> </h2>
-   <p><?php the_field('text_field'); ?></p>
+  <h2>
+    
+    <?php 
+    $fieldName = get_field('main-heading', 'option');
+    if( $fieldName ): echo $fieldName;
+   else: echo $fieldName["default_value"]; 
+   	endif;  ?> 
+
+  
+</h2>
+   <p>   <?php 
+    $fieldName = get_field('text_field', 'option');
+    if( $fieldName ): echo $fieldName;
+   else: echo $fieldName["default_value"]; 
+   	endif;?>
+    </p>
 </div>
+
 <?php 
-$images = get_field('slider');
+$images = get_field('mainSlider', 'option');
 $size = 'full'; // (thumbnail, medium, large, full or custom size)
 if( $images ): ?>
 <div class="slider">
@@ -48,9 +63,9 @@ if( $images ): ?>
 
 
 <div class="socialBlock">
-  <a href="<?php the_field('inst');?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/inst.png" alt="inst" /></a>
-  <a href="<?php the_field('pinterest');?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/pint.png" alt="pinterest" /></a>
-  <a href="<?php the_field('fb');?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/fb.png" alt="fb" /></a>
+  <a href="<?php the_field('inst', 'option');?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/inst.png" alt="inst" /></a>
+  <a href="<?php the_field('pinterest', 'option');?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/pint.png" alt="pinterest" /></a>
+  <a href="<?php the_field('fb', 'option');?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/fb.png" alt="fb" /></a>
 </div>
 
 <div class="block">

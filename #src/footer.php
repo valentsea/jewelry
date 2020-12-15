@@ -16,9 +16,9 @@
     <div class="footer__left">
       <a href=""><img src="<?php echo get_stylesheet_directory_uri() ?>/img/footerLogo.png" alt="DJ"></a>
       <ul class="footer__info">
-        <li class="footer__infoitem"><a href="<?php the_field('inst');?>"> instagram</a></li>
-        <li class="footer__infoitem"><a href="<?php the_field('pinterest');?>">facebook</a></li>
-        <li class="footer__infoitem"><a href="<?php the_field('fb');?>">pinterest</a></li> 
+        <li class="footer__infoitem"><a href="<?php the_field('inst', 'option');?>"> instagram</a></li>
+        <li class="footer__infoitem"><a href="<?php the_field('pinterest', 'option');?>">facebook</a></li>
+        <li class="footer__infoitem"><a href="<?php the_field('fb', 'option');?>">pinterest</a></li> 
       </ul>
     </div>
       <form class="email_form" action="submit">
