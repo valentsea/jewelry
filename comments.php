@@ -74,7 +74,7 @@ if ( post_password_required() ) {
 
 	comment_form(array(
 		'submit_button' => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="Send comment" />',
-		'title_reply'          => __( 'Send comment' ),
+		'title_reply'          => __( 'Send comment', 'jewelry' ),
 		'comment_field' => '<p class="comment-form-comment"><textarea placeholder="Comment" id="comment" name="comment" aria-required="true"></textarea></p>',
 		'fields' => array(
 			'author' => '
