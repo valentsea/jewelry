@@ -24,28 +24,28 @@ if(is_front_page() || is_home()) {
   <h2><?php the_field('main-page'); ?> </h2>
    <p><?php the_field('text_field'); ?></p>
 </div>
-
-<div class="slider">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-    <?php 
+<?php 
 $images = get_field('slider');
 $size = 'full'; // (thumbnail, medium, large, full or custom size)
 if( $images ): ?>
+<div class="slider">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+
 
         <?php foreach( $images as $image_id ): ?>
             <div class="swiper-slide">
                 <?php echo wp_get_attachment_image( $image_id, $size ); ?>
             </div>
         <?php endforeach; ?>
- 
-<?php endif; ?>
-         </div>
+        </div>
   </div>
   <!-- Add Arrows -->
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
 </div>
+<?php endif; ?>
+
 
 <div class="socialBlock">
   <a href="<?php the_field('inst');?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/inst.png" alt="inst" /></a>
