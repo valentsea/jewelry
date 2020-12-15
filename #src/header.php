@@ -31,19 +31,19 @@
   
   <?php echo get_custom_logo() ?>
     <nav class="header__menu menu">
-    
+     
       <?php
 			wp_nav_menu(
 				array(
-          'menu_id'        => 'primary-menu',
+          'theme_location' => 'menu',
           'container'   => false,
-          'items_wrap' => '  <button class="hamburger hamburger--squeeze" type="button">
+          'items_wrap' => '
+          <button class="hamburger hamburger--squeeze" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
         </button>
-        
-        <ul class="menu__list">%3$s</ul>'
+          <ul class="menu__list">%3$s</ul>'
 				)
 			);
       ?>

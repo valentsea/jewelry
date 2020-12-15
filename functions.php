@@ -50,7 +50,7 @@ if ( ! function_exists( 'jewelry_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'jewelry' ),
+				'menu' => esc_html__( 'Primary', 'jewelry' ),
 			)
 		);
 
@@ -434,9 +434,3 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 	
 	endif;
-
-
-	add_action( 'after_setup_theme', 'theme_register_nav_menu' );
-function theme_register_nav_menu() {
-	register_nav_menu( 'primary-menu', 'primary-menu' );
-}
