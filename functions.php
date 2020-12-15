@@ -272,7 +272,32 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
+}
 
-	
-	
+add_action('after_setup_theme', 'mytheme_setup');
+
+function mytheme_setup(){
+
+ if(get_option('page_on_front')=='0' && get_option('show_on_front')=='posts'){
+        // Create homepage
+        $homepage = array(
+            'post_type'    => 'page',
+            'post_title'    => 'Home',
+            'post_content'  => 'Make this page HOME',
+            'post_status'   => 'publish',
+            'post_author'   => 1
+        ); 
+        $blogpage = array(
+            'post_type'    => 'page',
+            'post_title'    => 'Blog',
+            'post_content'  => '',
+            'post_status'   => 'publish',
+            'post_author'   => 1
+        ); 
+        // Insert the post into the database
+         wp_insert_post( $homepage );
+         wp_insert_post( $blogpage );
+
+    }
+
 }
