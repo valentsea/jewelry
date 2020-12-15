@@ -16,3 +16,55 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
 */
+
+.entry-content img {
+}
+.alignleft,
+img.alignleft {
+}
+.alignright,
+img.alignright {
+}
+.aligncenter,
+img.aligncenter {
+}
+.alignnone,
+img.alignnone {
+}
+
+.wp-caption {
+}
+.wp-caption img {
+}
+.wp-caption p.wp-caption-text {
+}
+
+.wp-smiley {
+}
+
+blockquote.left {
+}
+blockquote.right {
+}
+
+.gallery dl {
+}
+.gallery dt {
+}
+.gallery dd {
+}
+.gallery dl a {
+}
+.gallery dl img {
+}
+.gallery-caption {
+}
+
+.size-full {
+}
+.size-large {
+}
+.size-medium {
+}
+.size-thumbnail {
+}
