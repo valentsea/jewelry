@@ -274,6 +274,7 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
+
 if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array(
@@ -447,9 +448,9 @@ if( function_exists('acf_add_local_field_group') ):
 	
 	endif;
 
-add_action('after_setup_theme', 'mytheme_setup');
+add_action('after_setup_theme', 'addPages');
 
-function mytheme_setup(){
+function addPages(){
 
  if(get_option('page_on_front')=='0' && get_option('show_on_front')=='posts'){
         // Create homepage
