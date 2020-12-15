@@ -39,7 +39,6 @@
       <?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'menu-1',
           'menu_id'        => 'primary-menu',
           'container'   => false,
           'items_wrap' => '<ul class="menu__list">%3$s</ul>'
